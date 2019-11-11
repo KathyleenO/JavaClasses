@@ -1,5 +1,8 @@
 package com.class13;
 
+import java.util.Arrays;
+import java.util.Scanner;
+
 public class InterviewQuestions {
 
 	public static void main(String[] args) {
@@ -16,23 +19,45 @@ public class InterviewQuestions {
 		 */
 
 		
-		//NUMBER 1
+		System.out.println("*********Number 1 Swap characters********");
 		
-		int y=5;
-		int x=10;
+		int a=10;
+		int b=20;
 		
-		y=y+x;
-		System.out.println(y);
+		a=a+b;//30
+		b=a-b;//30-20=10
+		a=a-b;//30-10=20
+		System.out.println("the value of a=" +a);
+		System.out.println("the value of b=" +b);
+		
+		String str="Hello";
+		String str2="Bye";
+		
+		str=str+str2;//HelloBye
+		str2=str.substring(0, 5);//hello    or  st.length - str2.length
+		str=str.substring(5);//bye
+		
+		System.out.println(str);
+		System.out.println(str2);
 		
 		
 		
+		System.out.println("****SORT NUMBERS********");
+		//easiest way SORT FUNCTION
 		
 		
 		
-		//NUMBER 2
 		
 		int[] array= {98,76,100,600,21,8};
-		
+		//ONE WAY 
+//		Arrays.sort(array);
+//		int min=array[0];
+//		int max=array[array.length-1];
+//		
+//		System.out.println(min);
+//		System.out.println(max);
+//		
+		//SECOND WAY
 		int max=array[0];
 		int min=array[0];
 		int med=array[0];
@@ -41,35 +66,139 @@ public class InterviewQuestions {
 			if(array[i]>max) {
 				max=array[i];
 				
-			}if  (array[i]<min) {
+			} if  (array[i]<min) {
 				min=array[i];
-			} if(array[i]>med && array[i]<med) {
-				med=array[i];
-			}
+			} 
+			
 						
 		}
-		System.out.println(med);
-		System.out.println(min);
-		System.out.println(max);
+		
+		System.out.println("The smallest is" +min);
+		System.out.println("The largest is" +max);
+		
+		System.out.println("****SECOND LARGEST*********");
+		int[] array2= {98,76,100,600,21,8};
+		
+		int large=array2[0];
+		int second=array2[0];
+		
+		for (int i = 0; i < array2.length; i++) {
+			
+			if(array2[i]>large) {
+				second=large;
+				large=array2[i];
+			}
+			if(array2[i]>second && array2[i]<large) {
+				second=array2[i];
+			}
+			
+		}
+		System.out.println(second);
 		
 		
 
 		
+		System.out.println("*****HOW MANY ALPHA CHAR*********");
+		// NUMBER 3 HOW MANY ALPHA CHARACTERS
 		
-		// NUMBER 3
 		
+		String str3="Syn8765%$#tax&&8754%$3345Sol887665%$#utions88978945%$$#";
 		
-		String str="Syn8765%$#tax&&8754%$3345Sol887665%$#utions88978945%$$#";
-		
-		String l=str.replaceAll("[^A-z]", "");
-		System.out.println(str.replaceAll("[^A-z]", ""));
+		String l=str3.replaceAll("[^A-Za-z]", "");
+		System.out.println(l);
+		//System.out.println(str3.replaceAll("[^A-z]", "")); OR 
 		System.out.println(l.length());
 	
 		
-		//Number  10
+		System.out.println("*******# OF STRINGS*****");
+		//4 find # of Strings in a string
 		
+		String str4="I dont feel great today";
+		
+		System.out.println(str4.substring(2, 17));    //Substringg
+		System.out.println(str4.length());          //FIND HOW MANY LETTERS
+		
+		System.out.println(str4.replace("dont", ""));   //HOW TO TAKE OUT PART OF STRING
+		
+		String[] words=str4.split(" ");      //how many sentences and length
+		System.out.println(words.length);
+		
+		System.out.println("******REVERSE STRING CHARACTERS**********");
+		//5 REVERSE STRING
+		
+		char [] reverse=str4.toCharArray();
+		
+			for (int i = reverse.length-1; i>0; i--) {
+				
+				System.out.println(reverse[i]);
+			}
+		System.out.println("*******REVERSED STRING WORDS********");
+			String reversed="";
+		String[] backwords=str4.split("\\s");
+		for (int i = backwords.length-1; i >=0; i--) {
+			reversed=reversed+backwords[i]+ " ";
+		}
+			System.out.println(reversed);
+	
+		System.out.println("*********8POLINDROME STRING********");
+		//Number  6
+		//REVERSE String, then capare 2 strings if string equals=polindrome else not 
+		
+		String original="kayak";
+		String reverse2="";
+		
+		for (int i =original.length()-1 ; i >=0; i--) {
+			reverse2+=original.charAt(i);  //+k=k+a+Kk
+		}
+		
+		System.out.println(reverse2);
+		
+		if(original.equals(reverse2)) {
+			System.out.println("String is Polidrome");
+		}else {
+			System.out.println("String not polidrome");
+		}
+			
+	     //Number7 PRIME NUMBER
+			
+//			Scanner scan=new Scanner(System.in);
+//		    System.out.println("Enter number ");
+//			int num=scan.nextInt();
+//			boolean isPrime=true;
+//			
+//			if(num ==0 || num==1) {
+//				isPrime=false;
+//				
+//			}else {
+//			for (int i = 2; i <num; i++) {
+//		
+//			if(num%i==0) {
+//				isPrime=false;
+//				break;
+//			}
+//	}
+//			}
+//			if(isPrime) {
+//				System.out.println(num+ " is a Prime number");
+//			}else {
+//				System.out.println(num+ " not prime");
+//			}
+			
+			System.out.println("*****FIBANNACHI NUMBERS*********");
+			//number 8
+			
+			int a1,b1,c1;
+			 a1=0;
+			 b1=1;
+			 
+
 	      
-	      
+	      for (int i = 0; i <10; i++) {
+			System.out.print(a1 +" ");
+			c1=a1+b1;
+			a1=b1;
+			b1=c1;
+		}
 	   
 	
 	
