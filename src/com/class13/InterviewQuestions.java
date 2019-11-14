@@ -142,7 +142,7 @@ public class InterviewQuestions {
 	
 		System.out.println("*********8POLINDROME STRING********");
 		//Number  6
-		//REVERSE String, then capare 2 strings if string equals=polindrome else not 
+		// firstREVERSE String, then capare 2 strings if string equals=polindrome else not 
 		
 		String original="kayak";
 		String reverse2="";

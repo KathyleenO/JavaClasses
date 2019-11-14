@@ -23,7 +23,7 @@ public class Phone {
 	void selfies() {
 		System.out.println("I can take selfies with my " +name);
 	}
-	
+
 	
 	public static void main(String[] args) {
 	
