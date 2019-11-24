@@ -6,7 +6,7 @@ public class Myself {
 	public static void main(String[] args) {
 		
 		
-	MysonMath son1=new MysonMath();
+	MySonMath son1=new MySonMath();
 	
 	son1.name="Ensar";
 	

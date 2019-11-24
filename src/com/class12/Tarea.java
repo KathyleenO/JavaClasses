@@ -89,7 +89,7 @@ public class Tarea {
 	  
 	  for(int i=0; i<word.length(); i++){
 	  
-	      System.out.println(word.charAt());
+	     // System.out.println(word.charAt());
 	    }
 	    
 	 
