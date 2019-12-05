@@ -6,7 +6,7 @@ public class TestPC {
 		// TODO Auto-generated method stub
 
 		
-		Child1  child1=new Child1();
+		/*Child1  child1=new Child1();
 		System.out.println(Child1.race);
 		System.out.println(child1.hairColor);
 		System.out.println(child1.eyeColor);
@@ -28,8 +28,17 @@ public class TestPC {
 		child2.cook();
 		child2.sing();
 		
-		
-		
+		*/
+//		Create the two final method with same name
+//		First method with boolean parameter
+//		Second method with String parameter
+//
+//		code to print below sentences. 
+//
+//		call them in main method
+//
+//		output would 
+		  
 	}
 
 }
